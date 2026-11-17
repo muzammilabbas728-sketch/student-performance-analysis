@@ -9,8 +9,11 @@ This project focuses on analyzing student academic performance and identifying t
 The project uses a relational star schema database model built in PostgreSQL and managed through DBeaver. It consists of one central fact table and four dimension tables, allowing analysis of student data from different perspectives.
 
 . student_performance_fct (Fact Table): Contains academic information such as semester GPA, attendance percentages, assignment submission rates, and student dropout status.
+
 . student_financial_dim: Stores financial details, including tuition payment status, family income levels, and weekly working hours.
+
 . student_health_info_dim: Contains student well-being information, including stress levels, average sleeping hours, and daily commute times.
+
 . student_information_dim: Stores student background information, such as age and scholarship status.
 
 This database structure makes it easier to combine information from different tables and explore the factors related to student performance and dropouts.
