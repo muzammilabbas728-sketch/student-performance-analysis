@@ -1,53 +1,42 @@
-# Student Performance & Dropout Analytics Dashboard
+Student Performance & Dropout Analytics Dashboard
+About the Project
+This project focuses on analyzing student academic performance and identifying the primary risk factors contributing to student dropouts at the university level.
 
-A comprehensive data analytics project designed to evaluate student performance, financial barriers, well-being indicators, and primary dropout risk factors using a multi-dimensional database model and an interactive Power BI executive dashboard.
+Database Design
+The project utilizes a relational star schema database model built in PostgreSQL and managed through DBeaver. The architecture consists of one central fact table surrounded by four dimension tables to support multidimensional analysis:
 
----
+student_performance_fct (Fact Table): Contains core academic metrics including semester GPA, attendance percentages, assignment submission rates, and student dropout status.
 
-## 📌 Project Overview
-Student retention is a critical challenge for educational institutions. This project investigates the multi-dimensional aspects of student data—spanning academic performance, financial standing, health/well-being, and lifestyle factors—to identify early warning indicators and root causes of student dropouts.
+student_financial_dim: Stores financial background details such as tuition payment status, family income levels, and weekly working hours.
 
----
+student_health_info_dim: Captures student well-being metrics including stress levels, average sleeping hours, and daily commute times.
 
-## 🗄️ Data Architecture & Schema
-The project is built on a structured relational data model combining a central fact table with core dimension tables managed in **PostgreSQL** (queried via **DBeaver**):
-* **`student_performance_fct`**: Central fact table tracking academic metrics, attendance, assignment submission rates, semester GPAs, and dropout status.
-* **`student_financial_dim`**: Financial dimension tracking tuition payment status (`tuition_up_to_date`), family income levels, and work hours.
-* **`student_health_info_dim`**: Well-being and lifestyle dimension tracking stress levels, sleep hours, and commute times (`Commute Group`).
-* **`student_information_dim`**: Demographic and background details including scholarship status and age.
+student_information_dim: Stores demographic and background data such as age and scholarship status.
 
----
+This structured schema enables seamless data integration and comprehensive multi-perspective analysis of student performance trends.
 
-## 📊 Key Analytical Insights (Dropout Factors)
-Answering core institutional inquiries, the analysis identifies the **top five student-related risk factors** associated with dropout rates:
-1. **Tuition Payment Status (`tuition_up_to_date`):** Unpaid or overdue tuition is the single largest financial indicator of student withdrawal.
-2. **Academic Performance (Semester GPA):** Consistently low GPAs or sharp academic decline between semesters heavily precede withdrawal.
-3. **Missed Deadlines & Submission Rates:** Chronic academic disengagement serves as an early behavioral warning sign.
-4. **Financial Background & Scholarships:** Low-income brackets combined with a lack of scholarship support restrict long-term enrollment stability.
-5. **Chronic Stress & Sleep Deprivation:** High psychological stress combined with inadequate sleep severely degrades academic retention.
+Dashboard Overview
+An interactive Power BI dashboard was developed to translate complex analytical findings into clear, actionable visual insights. The report is organized into three primary sections:
 
-### 🔍 Correlation vs. Causation
-* **Correlation (Early Indicators):** Low GPA and missed deadlines strongly correlate with dropout risk, serving as vital *early warning predictors*.
-* **Causation (Root Drivers):** External administrative blocks (unpaid tuition) and severe financial/well-being strain act as the *direct root causes* driving students out of the institution.
+Overall Performance: High-level metrics tracking semester grades and academic progress.
 
----
+Dropout Analysis: Deep dive into risk indicators, attendance correlations, and primary attrition factors.
 
-## 🛠️ Tech Stack & Tools
-* **Data Visualization:** Power BI (DAX measures, Calculated columns, Executive KPI summaries, Matrix & Clustered Bar Visuals)
-* **Database & Querying:** PostgreSQL, DBeaver
-* **Version Control:** Git & GitHub
+Key Observations: Summary insights and takeaways derived from the data model.
 
----
+Tools & Technologies
+PostgreSQL: Database creation, schema implementation, and relational data management.
 
-## 🚀 Dashboard Layout & Features
-* **Top Row:** Executive Summary KPI Cards (*Total Students, Overall Dropout Rate %, Average Institutional GPA*).
-* **Middle Section:** 
-  * Clustered Bar Chart mapping Dropout Rates by Tuition Status and Commute Time Groups.
-  * Multi-Variable Matrix Table intersecting scholarship holders, tuition compliance, and stress tiers with GPA and dropout percentages.
-* **Bottom Section:** Executive text box briefing outlining analytical findings and the correlation vs. causation framework.
+DBeaver: Database querying, script execution, and data inspection.
 
----
+Power BI: Data modeling, visualization, and interactive dashboard development.
 
-## 👤 Author
-* **Muzammil Abbas**
-* GitHub: [muzammilabbas728-sketch](https://github.com/muzammilabbas728-sketch)
+DAX: Writing calculated measures and dynamic columns for performance metrics.
+
+Git & GitHub: Version control and source code management.
+
+What I Learned
+Through this project, I gained hands-on, practical experience in relational database design, complex SQL querying, exploratory data analysis, and end-to-end Power BI dashboard development.
+
+Author
+Muzammil Abbas
