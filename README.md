@@ -1,42 +1,36 @@
-Student Performance & Dropout Analytics Dashboard
-About the Project
-This project focuses on analyzing student academic performance and identifying the primary risk factors contributing to student dropouts at the university level.
+ Student Performance & Dropout Analytics Dashboard
 
-Database Design
-The project utilizes a relational star schema database model built in PostgreSQL and managed through DBeaver. The architecture consists of one central fact table surrounded by four dimension tables to support multidimensional analysis:
+ About the Project
 
-student_performance_fct (Fact Table): Contains core academic metrics including semester GPA, attendance percentages, assignment submission rates, and student dropout status.
+This project focuses on analyzing student academic performance and identifying the main factors associated with student dropouts at the university level.
 
-student_financial_dim: Stores financial background details such as tuition payment status, family income levels, and weekly working hours.
+ Database Design
 
-student_health_info_dim: Captures student well-being metrics including stress levels, average sleeping hours, and daily commute times.
+The project uses a relational star schema database model built in PostgreSQL and managed through DBeaver. It consists of one central fact table and four dimension tables, allowing analysis of student data from different perspectives.
 
-student_information_dim: Stores demographic and background data such as age and scholarship status.
+. student_performance_fct (Fact Table): Contains academic information such as semester GPA, attendance percentages, assignment submission rates, and student dropout status.
+. student_financial_dim: Stores financial details, including tuition payment status, family income levels, and weekly working hours.
+. student_health_info_dim: Contains student well-being information, including stress levels, average sleeping hours, and daily commute times.
+. student_information_dim: Stores student background information, such as age and scholarship status.
 
-This structured schema enables seamless data integration and comprehensive multi-perspective analysis of student performance trends.
+This database structure makes it easier to combine information from different tables and explore the factors related to student performance and dropouts.
 
-Dashboard Overview
-An interactive Power BI dashboard was developed to translate complex analytical findings into clear, actionable visual insights. The report is organized into three primary sections:
+ Dashboard Overview
 
-Overall Performance: High-level metrics tracking semester grades and academic progress.
+An interactive Power BI dashboard was developed to present the analysis through visual reports. It is organized into three main sections:
 
-Dropout Analysis: Deep dive into risk indicators, attendance correlations, and primary attrition factors.
+1. Overall Performance: Displays key metrics related to student numbers, dropout rates, and average academic performance.
+2. Dropout Analysis: Explores the relationship between dropout rates and different factors, including tuition status, attendance, and student background.
+3. Key Observations: Highlights the main findings and patterns identified during the analysis.
 
-Key Observations: Summary insights and takeaways derived from the data model.
+ Tools & Technologies
 
-Tools & Technologies
-PostgreSQL: Database creation, schema implementation, and relational data management.
+- PostgreSQL: Database creation and data management.
+- DBeaver: Database querying and data inspection.
+- Power BI: Data modeling, visualization, and dashboard development.
+- DAX: Creating calculated measures and columns for analytical metrics.
+- Git & GitHub: Version control and project management.
 
-DBeaver: Database querying, script execution, and data inspection.
+ Author
 
-Power BI: Data modeling, visualization, and interactive dashboard development.
-
-DAX: Writing calculated measures and dynamic columns for performance metrics.
-
-Git & GitHub: Version control and source code management.
-
-What I Learned
-Through this project, I gained hands-on, practical experience in relational database design, complex SQL querying, exploratory data analysis, and end-to-end Power BI dashboard development.
-
-Author
 Muzammil Abbas
